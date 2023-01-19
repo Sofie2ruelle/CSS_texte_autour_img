@@ -1,0 +1,55 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: cursive;
+    background: rgb(198, 198, 198);
+    padding-top: 100px;
+}
+
+/*Forcer l'image à prendre la hauteur du texte en compte par rapport au container */
+
+.container::after {
+    content: ""; /*vide pour l'instancier*/
+    display: block;
+    clear: both;
+}
+
+.container {
+    max-width: 830px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 15px 5px 15px rgba(0, 0, 0, 0.3);
+    background-color: aliceblue;
+
+}
+
+.container h2 {
+    margin-bottom: 10px;
+}
+
+.container h4 {
+    text-align: right;
+}
+
+.container p {
+    line-height: 1.4;
+
+}
+
+img {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 50%;
+    float: left;
+    shape-outside: margin-box;
+    margin: 0 20px 5px 0;
+
+}
